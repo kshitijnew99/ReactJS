@@ -14,10 +14,14 @@ const App = () => {
       return <li key={inx} >Name : {elem.name}</li>
   })
 
-  const Changevalue = (e) => {
-    console.log(e.target.value);
+  const [fullname,setFullname] = useState("")
+  const [age,setage] = useState(null)
+  const Changevalue = (e) => setFullname(e.target.value);
     
-  } 
+  console.log(fullname);
+  console.log(age);
+  
+  
   
 
   return (<>
@@ -25,9 +29,14 @@ const App = () => {
 
               <h1>Registration</h1>
               <input
-              onChange={Changevalue}
+              onChange={(e) => setFullname(e.target.value)}
+              value={fullname}
               type="text" placeholder="Enter your name" />
-              <input type="text" placeholder="Enter your age" />
+
+              <input 
+              onChange={(e) => setage(e.target.value)}
+              value={age}
+              type="number" placeholder="Enter your age" />
               <button>submit</button>
             </form>
             <hr />
