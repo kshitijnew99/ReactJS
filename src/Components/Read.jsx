@@ -1,8 +1,14 @@
 import React from 'react'
 
-function Read() {
+function Read(props) {
+
+    // console.log(props);
+
+    const users = props.users
+    const setusers = props.setusers
+    
     const render = users.map(function(elem,inx){
-        
+
         return <li key={inx} >Name : {elem.name}</li>
     })
 

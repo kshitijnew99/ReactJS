@@ -20,9 +20,9 @@ const App = () => {
   
 
   return (<>
-            <Create />
+            <Create users={users}  setusers={setusers}/>
             <hr />
-            <Read />
+            <Read  users={users}  setusers={setusers} />
             
          </>)
 } 

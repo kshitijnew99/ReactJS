@@ -1,17 +1,24 @@
 import React from 'react'
+import { useState } from "react"
 
 
 
 
-function Create() {
+function Create(props) {
+
+    // console.log(props);
+    const users = props.users
+    const setusers = props.setusers
+    
 
     const [fullname,setFullname] = useState("")
     const [age,setage] = useState()
-    
+
     const submitHandler = (e) => {
         e.preventDefault();
         const newusers = {fullname,age}
-        console.log(newusers)
+        // console.log(newusers)
+        // setting user into this
     }  
 
 
