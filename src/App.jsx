@@ -15,17 +15,23 @@ const App = () => {
   })
 
   const [fullname,setFullname] = useState("")
-  const [age,setage] = useState(null)
-  const Changevalue = (e) => setFullname(e.target.value);
+  const [age,setage] = useState()
+
+
+  // const Changevalue = (e) => setFullname(e.target.value);
     
-  console.log(fullname);
-  console.log(age);
   
   
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    const newusers = {fullname,age}
+    console.log(newusers)
+  }
   
 
   return (<>
-            <form action="">
+            <form onSubmit={submitHandler}>
 
               <h1>Registration</h1>
               <input
