@@ -1,20 +1,42 @@
 import React, { useState } from 'react'
+import {nanoid} from 'nanoid'
 
 const App = () => {
 
   const [todo,settodo] = useState([
-    {id: 1 , title:'kaam kar bhai', isCompleted : false}
+    // {id: 1 , title:'kaam kar bhai', isCompleted : false}
   ])
 
   const [title,settitle] = useState("")
-  const [ischecked,setIsChecked] = useState(false)
-  const [gender,setgender] = useState("Female") 
-  const [city, setcity] = useState("lucknow")
+  
 
 
   const submitHandler = (e) =>{
-    e.preventDefault();
+    e.preventDefault();    
+    const newtask = {
+      id : nanoid(),
+      title : title,
+      isCompleted : "false"
+    }
+
+    // let copytodo = [...todo];
+    // copytodo.push(newtask);
+    // settodo(copytodo);
+
+    settodo([...todo,newtask]) // both this line and the above 3 line are doing same work
+
+    settitle("") 
   }
+
+  const render = todo.map(function(elem,idx){
+      return  <li>
+                {/* <p>Id : {elem.id}</p> */}
+                {/* <br /> */}
+                <p>Task : {elem.title}</p>
+                {/* <br /> */}
+                <p>IsCompleted : {elem.isCompleted}</p>
+              </li>
+  })
 
   return (
     <div>
@@ -28,33 +50,17 @@ const App = () => {
         />
         <br />
         <br />
-        <input
-        onChange={(e) => setIsChecked(e.target.checked)} 
-        checked={ischecked}
-        value={ischecked}
-        type="checkbox" /> Completed
-        <br />
-        <br />
-        <input
-        value = 'Male' // you can ses that male is selected this is 2 way binding 
-        onChange={(e) => setgender(e.target.value)}
-        checked = {gender == 'Male' && true}
-        type="radio" /> Male
-
-
-        <input
-        value = 'Female'
-        onChange={(e) => setgender(e.target.value)}
-        checked = {gender == 'Female' && true}
-        type="radio" /> Female 
-        <br /><br />
-        <select  value={city} onChange={(e) => setcity(e.target.value)} >
-          <option value="Delhi">Delhi</option>
-          <option value="lucknow">Lucknow</option>
-          <option value="mumbai">Mumbai</option>
-        </select>
+        
         <button>Add Task</button>
       </form>
+      <hr />
+      <br />
+      <h1>User Data</h1>
+      <h2>
+        <ul>
+          {render}
+        </ul>
+      </h2>
     </div>
   )
 }
