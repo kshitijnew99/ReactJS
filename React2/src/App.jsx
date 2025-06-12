@@ -49,7 +49,7 @@ const App = () => {
         type="radio" /> Female 
         <br /><br />
         <select  value={city} onChange={(e) => setcity(e.target.value)} >
-          <option value="delhi">Delhi</option>
+          <option value="Delhi">Delhi</option>
           <option value="lucknow">Lucknow</option>
           <option value="mumbai">Mumbai</option>
         </select>
