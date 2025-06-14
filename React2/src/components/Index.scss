@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#root{
+    background-color: rgb(23, 1, 85);
+    height: 100%;
+    width: 100%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+
+
+}
+
+.create{
+    width: 65%;
+    margin-top: 90px;
+    margin-left: 90px;
+    color: white;
+    font-weight:100;
+    padding: 10px 20px;
+    
+
+    h1{
+        font-size: 70px;
+
+        .remainder{
+            color: salmon;
+        }
+    }
+    .task-input{
+        margin-top: 40px;
+        width: 70%;
+        height: 50px;
+        border-radius: 10px;
+        background-color: rgb(50, 26, 114) ;
+        padding: 30px 20px;
+        font-size: 30px;
+        color: white;
+    }
+    .createButton{
+        margin-top: 40px;
+        font-size: 28px;
+        padding: 10px 25px;
+        border-radius: 20px;
+        transition: all 0.1s linear ;
+        background-color: rgb(23, 1, 85) ;
+        color: white;
+        box-shadow: 2px 2px 2px;
+    }
+    .createButton:active{
+        scale: 0.95;
+    }
+}
+
+.show{
+    width: 35%;  
+    margin-top: 90px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    overflow: auto;
+    
+
+    h1{
+        color: white;
+        font-size: 70px;
+        font-weight: 100;
+        .task{
+            color: salmon;
+        }
+        margin-bottom: 40px;
+        // position: fixed;
+    }
+
+    .renderlist{
+        margin-top: 20px;    
+        padding: 10px;
+        background-color: rgb(16, 0, 58);
+        // z-index: 1;
+        gap: 10px;
+        color: white;
+        font-weight: 400;
+        font-size: 25px;
+        border-radius: 20px;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        overflow: auto;
+
+        .delete{
+            color: tomato;
+        }
+
+    }
+}

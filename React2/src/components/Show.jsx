@@ -1,4 +1,5 @@
 import React from 'react'
+import './index.scss'
 
 const Show = (props) => {
 
@@ -7,27 +8,26 @@ const Show = (props) => {
 
     const DeleteHandler = (id) => {
         const filtertodo = todo.filter((todo) => todo.id != id)
-        settodo(filtertodo);
-        
+        settodo(filtertodo);  
     }
 
     const render = todo.map((todo) => {
-        return  <li key={todo.id}>
-                    Task : {todo.title} | <span onClick={() => DeleteHandler(todo.id)}>Delete</span>
-
-
+        return  <li key={todo.id} className='renderlist'>
+                    Task : {todo.title} 
+                    <span  className='delete' onClick={() => DeleteHandler(todo.id)}>Delete</span>
                 </li>
     })
 
     return (
-        <>
-            <h1>User Data</h1>
+        <div className='show'>
+            <h1><i>Pending <span className='task'>Task</span></i></h1>
             <h2>
-                <ul>
-                {render} 
-                </ul>
-            </h2>
-        </>
+                <ol >
+                    {render}
+                </ol>
+            </h2>   
+            
+        </div>
     )
 }
 

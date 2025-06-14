@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+// import './index.scss'
 
 import Create from './components/Create'
 import Show from './components/Show'
@@ -19,3 +20,4 @@ const App = () => {
 }
 
 export default App
+  
