@@ -22,10 +22,16 @@ const Create = (props) => {
         // settodo(copytodo);
 
         settodo([...todo,newtask]) // both this line and the above 3 line are doing same work
-
+        
         settitle("") 
     }
 
+    const buttomcss = {
+                        backgroundColor: "blue",
+                        padding : "10px 20px", 
+                        fontSize : "20px" , 
+                        borderRadius : "20px" , 
+    }
 
     return (
         <>
@@ -40,12 +46,7 @@ const Create = (props) => {
                 <br />
                 <br />
                 
-                <button style={{
-                    backgroundColor: "blue",
-                    padding : "10px 20px", 
-                    fontSize : "20px" , 
-                    borderRadius : "20px" , 
-                    }}>Add Task</button>
+                <button style={buttomcss}>Add Task</button>
             </form>
         </>
     )

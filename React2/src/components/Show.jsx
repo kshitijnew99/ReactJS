@@ -5,10 +5,17 @@ const Show = (props) => {
     const todo = props.todo;
     const settodo = props.settodo;
 
-    const render = todo.map(function(elem,idx){
-        return  <li key={idx}>
-                    <p>Task : {elem.title}</p>
-                    <p>IsCompleted : {elem.isCompleted}</p>
+    const DeleteHandler = (id) => {
+        const filtertodo = todo.filter((todo) => todo.id != id)
+        settodo(filtertodo);
+        
+    }
+
+    const render = todo.map((todo) => {
+        return  <li key={todo.id}>
+                    Task : {todo.title} | <span onClick={() => DeleteHandler(todo.id)}>Delete</span>
+
+
                 </li>
     })
 
@@ -17,7 +24,7 @@ const Show = (props) => {
             <h1>User Data</h1>
             <h2>
                 <ul>
-                {render}
+                {render} 
                 </ul>
             </h2>
         </>
