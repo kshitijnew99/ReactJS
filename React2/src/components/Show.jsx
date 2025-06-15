@@ -1,14 +1,16 @@
 import React from 'react'
 import './index.scss'
-
+import { toast} from 'react-toastify'
 const Show = (props) => {
 
     const todo = props.todo;
     const settodo = props.settodo;
 
     const DeleteHandler = (id) => {
-        const filtertodo = todo.filter((todo) => todo.id != id)
+        const filtertodo = todo.filter((todo) => todo.id != id) 
         settodo(filtertodo);  
+
+        toast.error("task deleted");
     }
 
     const render = todo.map((todo) => {

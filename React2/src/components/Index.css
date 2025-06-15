@@ -17,6 +17,13 @@ html, body {
   display: flex;
 }
 
+.toast {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .create {
   width: 65%;
   margin-top: 90px;
@@ -27,6 +34,7 @@ html, body {
 }
 .create h1 {
   font-size: 70px;
+  font-weight: 100;
 }
 .create h1 .remainder {
   color: salmon;
@@ -53,6 +61,10 @@ html, body {
 }
 .create .createButton:active {
   scale: 0.95;
+}
+.create .errorvalidation {
+  color: salmon;
+  font-size: 20px;
 }
 
 .show {

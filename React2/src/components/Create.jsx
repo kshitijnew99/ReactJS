@@ -1,6 +1,9 @@
-import React, { useState } from 'react'
 import {nanoid} from 'nanoid'
 import './index.scss'
+import { useForm } from 'react-hook-form'
+import { toast } from 'react-toastify';
+
+
 
 const Create = (props) => {
 
@@ -8,42 +11,45 @@ const Create = (props) => {
     const todo = props.todo;
     const settodo = props.settodo;
 
-    const [title,settitle] = useState("")
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
-    const submitHandler = (e) =>{
-        e.preventDefault();    
-        const newtask = {
-        id : nanoid(),
-        title : title,
-        isCompleted : "false"
-        }
+    
 
-        // let copytodo = [...todo];
-        // copytodo.push(newtask);
-        // settodo(copytodo);
+    const submitHandler = (data) =>{
+        // e.preventDefault();
+        data.isCompleted = false;
+        data.id = nanoid();
+         
 
-        settodo([...todo,newtask]) // both this line and the above 3 line are doing same work
+        const copytodo = [...todo];
+        copytodo.push(data)
+        settodo(copytodo);
+        reset()
+
+        toast.success("Task Added.")        
         
-        settitle("")    
     }
 
+    // console.log();
     
 
     return (
         <div className="create">
-            <h1>Set <span className='remainder'>Remainder</span> for <br /> Task</h1>
-            <form onSubmit={submitHandler}>
+            <h1>Set <span className='remainder'><i>Remainder</i></span> for <br /> Task</h1>
+            <form onSubmit={handleSubmit(submitHandler)}>
                 <input 
+                {...register('title',{required : 'title can not be empty'})      }
                 className='task-input'
-                onChange={(e) => settitle(e.target.value)}
-                value={title}
                 type="text" 
                 placeholder='Enter your task' 
                 />
                 <br />
+                <small className='errorvalidation'>{errors?.title?.message} </small> 
+                
+                <br />
                 
                 <button className='createButton'>Add Task</button>
-            </form>
+            </form> 
         </div>
     )
 }
