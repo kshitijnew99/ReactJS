@@ -16,7 +16,7 @@ const Create = (props) => {
     
 
     const submitHandler = (data) =>{
-        // e.preventDefault();
+        
         data.isCompleted = false;
         data.id = nanoid();
          
