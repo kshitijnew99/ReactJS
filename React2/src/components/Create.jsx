@@ -2,24 +2,19 @@ import {nanoid} from 'nanoid'
 import './index.scss'
 import { useForm } from 'react-hook-form'
 import { toast } from 'react-toastify';
+import  { useContext } from 'react'
+import { todocontext } from './Wrapper'
 
+const Create = () => {
 
-
-const Create = (props) => {
-
-
-    const todo = props.todo;
-    const settodo = props.settodo;
+    const [todo,settodo] = useContext(todocontext)
 
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
-
-    
 
     const submitHandler = (data) =>{
         
         data.isCompleted = false;
-        data.id = nanoid();
-         
+        data.id = nanoid();      
 
         const copytodo = [...todo];
         copytodo.push(data)
@@ -29,9 +24,6 @@ const Create = (props) => {
         toast.success("Task Added.")        
         
     }
-
-    // console.log();
-    
 
     return (
         <div className="create">

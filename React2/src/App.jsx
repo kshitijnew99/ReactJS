@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React  from 'react'
 // import './index.scss'
 
 import Create from './components/Create'
@@ -6,15 +6,11 @@ import Show from './components/Show'
 
 const App = () => {
 
-  const [todo,settodo] = useState([
-    // {id: 1 , title:'kaam kar bhai', isCompleted : false}
-  ])
-
   return (
     <>
-      <Create todo={todo} settodo={settodo} />
+      <Create  />
       <hr />
-      <Show todo={todo} settodo={settodo}/>
+      <Show />
     </>
   )
 }

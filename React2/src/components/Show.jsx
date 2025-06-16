@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './index.scss'
 import { toast} from 'react-toastify'
-const Show = (props) => {
 
-    const todo = props.todo;
-    const settodo = props.settodo;
+import { todocontext } from './Wrapper'
+const Show = () => {
 
+    const [todo,settodo] = useContext(todocontext)
+    
     const DeleteHandler = (id) => {
         const filtertodo = todo.filter((todo) => todo.id != id) 
         settodo(filtertodo);  
