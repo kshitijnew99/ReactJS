@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(8, 7, 59);
+  color: white;
+  font-size: 25px;
+}
+
+.nav {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 40px;
+  color: white;
+  background-color: rgb(8, 7, 59);
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+.nav a:focus {
+  text-decoration: underline;
+  color: rgb(55, 176, 216);
+  scale: 0.95;
+}
+
+#root {
+  padding: 20px;
+}
+#root .product {
+  margin-left: 100px;
+}
+#root .product h1 {
+  font-size: 50px;
+  margin: 25px 0px;
+}
+#root .product button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  transition: all 0.1s linear;
+}
+#root .product button:active {
+  scale: 0.9;
+}/*# sourceMappingURL=index.css.map */
