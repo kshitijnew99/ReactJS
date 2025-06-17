@@ -1,6 +1,6 @@
 import { useNavigate,  } from "react-router-dom"
 
-const ServiceDetail = () => {
+const ServiceUpdate = () => {
 
   const navigator = useNavigate();
   
@@ -10,12 +10,12 @@ const ServiceDetail = () => {
   //     navigator('/product')
   // }
   return (
-    <div className="serviceDetail">
-      <h1>More Services</h1>
-      <h2>Choose Us</h2>
+    <div className="ServiceUpdate">
+      <h1>Service Update karwalo</h1>
+      <h2>Contact karo</h2>
       <button onClick={() => navigator(-1)}>Go Back</button>
     </div>
   )
 }
 
-export default ServiceDetail
+export default ServiceUpdate

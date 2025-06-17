@@ -9,7 +9,8 @@ const service = () => {
   return (
     <div className="service">
       <h1>Service</h1>
-      <button onClick={() => navigator('/service/detail')}>More Details</button>
+      <button  onClick={() => navigator('/service/detail')}>More Details</button>
+      <button  onClick={() => navigator('/service/update')}>See Updates</button>
       <br />
       <hr />
       <Outlet />
