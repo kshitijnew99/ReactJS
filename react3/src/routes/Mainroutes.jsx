@@ -4,14 +4,20 @@ import About from '../components/About';
 import Service from '../components/Service';
 import Product from '../components/Product';
 import ProductDetail from '../components/ProductDetail';
+import ServiceDetail from '../components/ServiceDetail';
 
 const Mainroutes = () => {
   return (
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/product' element={<Product />} />
-      <Route path='/product/detail' element={<ProductDetail />} />
-      <Route path='/service' element={<Service />} />
+      <Route path='/product/detail/:name' element={<ProductDetail />} />
+
+
+      <Route path='/service' element={<Service />} >
+        <Route path='/service/detail' element={<ServiceDetail />} />
+      </Route>
+      
       <Route path='/about' element={<About />} />
     </Routes>
   );

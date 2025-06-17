@@ -69,4 +69,38 @@ html, body {
 }
 #root .productDetail button:active {
   scale: 0.9;
+}
+#root .service {
+  margin-left: 100px;
+}
+#root .service h1 {
+  font-size: 50px;
+  margin: 25px 0px;
+}
+#root .service button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  transition: all 0.1s linear;
+  margin-bottom: 20px;
+}
+#root .service button:active {
+  scale: 0.9;
+}
+#root .serviceDetail h1 {
+  font-size: 55px;
+  margin: 25px 0px;
+}
+#root .serviceDetail h2 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+#root .serviceDetail button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  transition: all 0.1s linear;
+}
+#root .serviceDetail button:active {
+  scale: 0.9;
 }/*# sourceMappingURL=index.css.map */
