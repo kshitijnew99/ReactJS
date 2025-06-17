@@ -58,5 +58,29 @@ html,body{
             scale: 0.9;
         }
     }
+
+    .productDetail{
+         margin-left: 100px;
+         
+
+        h1{
+            font-size: 55px;
+            margin: 25px 0px;
+
+        }
+        h2{
+            font-size: 40px;
+            margin-bottom: 25px;
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 10px;
+            transition: all 0.1s linear;
+        }
+        button:active{
+            scale: 0.9;
+        }
+    }
 }
 

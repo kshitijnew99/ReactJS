@@ -49,4 +49,24 @@ html, body {
 }
 #root .product button:active {
   scale: 0.9;
+}
+#root .productDetail {
+  margin-left: 100px;
+}
+#root .productDetail h1 {
+  font-size: 55px;
+  margin: 25px 0px;
+}
+#root .productDetail h2 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+#root .productDetail button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  transition: all 0.1s linear;
+}
+#root .productDetail button:active {
+  scale: 0.9;
 }/*# sourceMappingURL=index.css.map */

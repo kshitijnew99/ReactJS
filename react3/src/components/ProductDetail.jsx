@@ -4,14 +4,14 @@ const ProductDetail = () => {
 
   const navigator = useNavigate();
 
-  const NavigateHandler = () => {
-      navigator('/product')
-  }
+  // const NavigateHandler = () => {
+  //     navigator('/product')
+  // }
   return (
-    <div>
+    <div className="productDetail">
       <h1>Product Name</h1>
-      <h1>Product Details</h1>
-      <button onClick={NavigateHandler}>Go Back</button>
+      <h2>Product Details..</h2>
+      <button onClick={() => navigator(-1)}>Go Back</button>
     </div>
   )
 }
