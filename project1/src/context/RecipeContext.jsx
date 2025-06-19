@@ -8,11 +8,14 @@ const RecipeContext = (props) => {
 
 
     const [data,setdata] = useState([]) 
-  return (
-    <recipecontext.Provider value={{data,setdata}}>
-        {props.children}
-    </recipecontext.Provider>
-  )
+    console.log(data);
+    
+
+    return (
+        <recipecontext.Provider value={{data,setdata}}>
+            {props.children}
+        </recipecontext.Provider>
+    )
 }
 
 export default RecipeContext;
