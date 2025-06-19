@@ -1,8 +1,15 @@
-import React from 'react'
+
+import Mainroutes from './Routes/Mainroutes';
+import Nav from './components/Nav';
+import './index.scss'
+
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <Nav />
+      <Mainroutes />
+    </div>
   )
 }
 
