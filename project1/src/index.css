@@ -58,6 +58,68 @@ html, body {
 }
 
 .create {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-left: 15%;
+}
+.create .form .url {
+  font-size: 18px;
+  padding: 10px 0px;
+  background-color: rgb(5, 3, 78);
+  color: white;
+  margin-bottom: 10px;
+  border: transparent;
+}
+.create .form hr {
+  width: 20%;
+}
+.create .form .error {
+  font-size: 15px;
+  display: block;
+  margin-top: 10px;
+  color: salmon;
+}
+.create .form .recipe-title {
+  font-size: 18px;
+  padding: 10px 0px;
+  background-color: rgb(5, 3, 78);
+  color: white;
+  margin-bottom: 10px;
+  border: transparent;
+}
+.create .form .description {
+  background-color: rgb(5, 3, 78);
+  border: transparent;
+  color: white;
+  font-size: 20px;
+}
+.create .form .ingredients {
+  background-color: rgb(5, 3, 78);
+  border: transparent;
+  color: white;
+  font-size: 20px;
+}
+.create .form .instruction {
+  background-color: rgb(5, 3, 78);
+  border: transparent;
+  color: white;
+  font-size: 20px;
+}
+.create .form .category {
+  background-color: rgb(5, 3, 78);
+  color: gray;
+  font-size: 20px;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+}
+.create .form .save-recipe {
+  padding: 10px 10px;
+  font-size: 18px;
+  background-color: rgb(2, 0, 53);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+.create .form .save-recipe:active {
+  scale: 0.9;
 }/*# sourceMappingURL=index.css.map */
