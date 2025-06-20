@@ -8,8 +8,12 @@ const Recipes = () => {
   const renderrecipe = data.map((recipe) => {
     return <div className='renderrecipe' key={recipe.id}>
       <h1>{recipe.Name}</h1>
+      <h3>{recipe.ingredients}</h3>
+      <h3>{recipe.category}</h3>
       <h3>{recipe.description}</h3>
-      {/* <h3>{recipe.ingredients}</h3> */}
+      <h3>{recipe.instruction}</h3>
+      
+      
       <br />
     </div>
   });
