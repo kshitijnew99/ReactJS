@@ -24,7 +24,7 @@ const Create = () => {
         <form className="form" onSubmit={handleSubmit(SubmitHandler)} >
             <input 
             className="url"
-            {...register("image-url")}
+            {...register("url")}
             type="url" 
             placeholder='Enter Image URL' /> <br /> <  hr />
             <small className="error" >This is how error is shown</small> <br />
@@ -38,7 +38,7 @@ const Create = () => {
             <textarea 
             className="description"
             {...register("description")}
-            placeholder="// Start form here"  ></textarea>
+            placeholder="// Add the description"  ></textarea>
             <hr /><br />
 
             <textarea 

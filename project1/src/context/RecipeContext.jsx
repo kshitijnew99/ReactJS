@@ -21,7 +21,7 @@ const RecipeContext = (props) => {
             ],
             "instruction": "Preheat the oven to 475°F (245°C)."
                 ,
-            "image": "https://cdn.dummyjson.com/recipe-images/1.webp",
+            "url": "https://cdn.dummyjson.com/recipe-images/1.webp",
             "description" : "Bake in the preheated oven for 12-15 minutes or until the crust is golden brown.",
             "category" : "Snacks"
             

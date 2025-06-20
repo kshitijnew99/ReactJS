@@ -54,9 +54,17 @@ html,body{
     margin-left: 15%;
 }
 
+
 .recipes{
+    padding: 10px;
+    // background-color: yellow;
     margin-top: 40px;
-    margin-left: 15%;
+    margin-left: 20%;
+    margin-right: 10%;
+    // width: 35%; 
+    gap : 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .about{
@@ -98,6 +106,9 @@ html,body{
             color: white;
             margin-bottom: 10px;
             border: transparent;
+        }
+        .recipe-title:hover{
+            box-flex-group: white;
         }
         .description{
             background-color: rgb(5, 3, 78);   
@@ -151,4 +162,47 @@ html,body{
     h3{
         color: rgb(251, 108, 92);
     }
+}
+
+.card{
+    // background-color: yellow;
+    text-decoration: none;
+    .showcard{
+        padding: 10px;
+        border: solid 5px black;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        width: 400px;
+        height: fit-content;
+        aspect-ratio: 1;
+        // display: flex;
+        .image{
+            height: 20vh;
+            aspect-ratio: 1;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        h1{
+            color: white;
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        h3{
+            color: salmon;
+            font-size: 18px;
+            font-weight: 400; 
+            margin-bottom: 10px;  
+        }
+        h4{
+            color: gray;
+            font-size: 14px;
+            font-weight: 400;   
+        }
+        hr{
+            border: 1px solid gray;
+            margin: 15px 0px;
+        }
+    }
+
 }
