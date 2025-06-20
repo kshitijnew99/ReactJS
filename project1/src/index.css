@@ -110,6 +110,7 @@ html, body {
   font-size: 20px;
   padding: 10px 0px;
   margin-bottom: 10px;
+  border-radius: 10px;
 }
 .create .form .save-recipe {
   padding: 10px 10px;
@@ -122,4 +123,13 @@ html, body {
 }
 .create .form .save-recipe:active {
   scale: 0.9;
+}
+
+.renderrecipe {
+  font-size: 18px;
+  font-weight: 100;
+  color: white;
+}
+.renderrecipe h3 {
+  color: rgb(251, 108, 92);
 }/*# sourceMappingURL=index.css.map */

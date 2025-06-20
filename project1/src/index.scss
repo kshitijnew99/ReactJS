@@ -124,6 +124,7 @@ html,body{
             font-size: 20px;
             padding: 10px 0px;
             margin-bottom: 10px;
+            border-radius: 10px;
         }
         .save-recipe{
             // display: block;
@@ -139,5 +140,15 @@ html,body{
         .save-recipe:active{
             scale: 0.9;
         }
+    }
+}
+
+.renderrecipe{
+    font-size: 18px;
+    font-weight: 100;
+    color: white;
+
+    h3{
+        color: rgb(251, 108, 92);
     }
 }

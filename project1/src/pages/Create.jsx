@@ -56,9 +56,10 @@ const Create = () => {
             <select 
             {...register("categort")}
             className="category">
-                <option value="cat-1">Category 1</option>
-                <option value="cat-2">Category 2</option>
-                <option value="cat-3">Category 3</option>
+                <option value="breakfast">BreakFast</option>
+                <option value="lunch">Lunch</option>
+                <option value="snacks">Snacks</option>
+                <option value="dinner">Dinner</option>
             </select>
             {/* <br /> */}
             <button className="save-recipe" >Save Recipe</button>
