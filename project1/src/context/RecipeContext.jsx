@@ -9,7 +9,7 @@ const RecipeContext = (props) => {
 
     const [data,setdata] = useState([
         {
-            "id": 1,
+            "id": "1",
             "Name": "Classic Margherita Pizza",
             "category" : "Snacks",
             "ingredients": [
