@@ -197,5 +197,33 @@ html, body {
 
 .singlerecipe {
   margin-top: 40px;
-  margin-left: 15%;
+}
+.singlerecipe .single-img {
+  width: 400px;
+  border-radius: 40px;
+  margin-left: 36%;
+}
+.singlerecipe h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.singlerecipe h3 {
+  color: salmon;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.singlerecipe h5 {
+  color: gray;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+.singlerecipe h5 .instruction-more {
+  color: rgb(67, 67, 255);
+  font-size: 14px;
 }/*# sourceMappingURL=index.css.map */

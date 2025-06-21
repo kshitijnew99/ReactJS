@@ -223,5 +223,41 @@ html,body{
 
 .singlerecipe{
     margin-top: 40px;
-    margin-left: 15%
+    // margin-left: 15%;
+    // background-color: yellow;
+
+    .single-img{
+        width: 400px;
+        border-radius: 40px;
+        margin-left: 36%;
+        
+        
+    }
+
+    
+    h1{
+        color: white;
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    h3{
+        color: salmon;
+        font-size: 18px;
+        font-weight: 400; 
+        margin-bottom: 10px;  
+        text-align: center;
+    }
+    h5{
+        color: gray;
+        font-size: 14px;
+        font-weight: 400; 
+        text-align: center;
+            
+        .instruction-more{
+            color: rgb(67, 67, 255);
+            font-size: 14px;
+        }
+    }
 }

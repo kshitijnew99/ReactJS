@@ -39,7 +39,7 @@ const RecipeContext = (props) => {
             "Name": "Chicken Biryani",
             "category" : "Dinner",
             "description" : "Chicken biryani is a royal served to the mugal kings",
-            "id" : "WDjwoG4yhnbqLYsv8YhQD",
+            "id" : "WDjwoG4yhnbqNYsv8YhQD",
             "ingredients": "Biryani Rice, Chicken, Onion, Tomato",
             'instruction' : "1) Boil the rice.2) Heat oil in a pan and sauté the onion and tomato.",
             "url": "https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg"
