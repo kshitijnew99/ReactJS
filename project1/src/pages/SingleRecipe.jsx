@@ -3,6 +3,7 @@ import { recipecontext } from './../context/RecipeContext';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
 
 const SingleRecipe = () => {
     const navigate = useNavigate();
@@ -11,16 +12,23 @@ const SingleRecipe = () => {
 
     const SubmitHandler =  (recipe) =>{ 
         var index = data.findIndex((recipe) => param.id == recipe.id)
-        console.log(index);
-        
-
+        const copydata = [...data];
+        copydata[index] = {...copydata[index], ...recipe };
+        console.log(copydata[index]);
+        setdata(copydata);
+        toast.success("Recipe Updated😋")
     }
 
     // const { data } = useContext(recipecontext);
     const param = useParams();
     var recipe = data.find((recipe) => param.id == recipe.id)
 
-    
+    const DeleteHandler = () => {
+        var filterdata = data.filter((recipe) => recipe.id !== param.id);
+        setdata(filterdata);
+        toast.success("Recipe Removed.")
+        navigate("/recipes");
+    }
     
   return (
     <div className='singlerecipe'>
@@ -79,7 +87,7 @@ const SingleRecipe = () => {
                 </select>
                 <br />
                 <button className="update-recipe" >Update Recipe</button>
-                <button className="delete-recipe" >Delete Recipe</button>
+                <button onClick={DeleteHandler} className="delete-recipe" >Delete Recipe</button>
 
 
             </form>
