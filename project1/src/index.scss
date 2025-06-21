@@ -223,41 +223,141 @@ html,body{
 
 .singlerecipe{
     margin-top: 40px;
-    // margin-left: 15%;
-    // background-color: yellow;
-
-    .single-img{
-        width: 400px;
-        border-radius: 40px;
-        margin-left: 36%;
-        
-        
-    }
-
+    margin-left: 15%;
+    display: flex;
+    gap: 10%;
     
-    h1{
-        color: white;
-        font-size: 30px;
-        font-weight: 700;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-    h3{
-        color: salmon;
-        font-size: 18px;
-        font-weight: 400; 
-        margin-bottom: 10px;  
-        text-align: center;
-    }
-    h5{
-        color: gray;
-        font-size: 14px;
-        font-weight: 400; 
-        text-align: center;
+    // background-color: yellow;
+    padding: 10px;
+    width: 80%;
+
+    .single-recipe-data{
+        .single-img{
+            width: 200px;
+            border-radius: 40px;
+            // margin-left: 36%;
             
-        .instruction-more{
-            color: rgb(67, 67, 255);
-            font-size: 14px;
+            
+        }
+
+        
+        h1{
+            color: white;
+            font-size: 50px;
+            font-weight: 100;
+            margin-bottom: 10px;
+            // text-align: center
+            letter-spacing:-1px;
+            word-spacing: -5px;
         }
     }
+
+    .modify-form{
+
+        .form{
+            width: 200%;
+            // margin-right: 35%;
+            
+
+
+            .url{
+                font-size: 18px;
+                padding: 10px 0px;
+                background-color: rgb(5, 3, 78);
+                color: white;
+                margin-bottom: 10px;
+                border: transparent;
+                width: 100%;
+            }
+
+            hr{
+                width: auto;
+            }
+
+            .error{
+
+                font-size: 15px;
+                display: block;
+                margin-top: 10px ;
+                // padding: 4px 0px;
+                color: salmon;
+            }
+
+            .recipe-title{
+                width: 100%;
+                font-size: 18px;
+                padding: 10px 0px;  
+                background-color: rgb(5, 3, 78);
+                color: white;
+                margin-bottom: 10px;
+                border: transparent;
+            }
+            .recipe-title:hover{
+                box-flex-group: white;
+            }
+            .description{
+                width: 100%;
+                background-color: rgb(5, 3, 78);   
+                border: transparent;
+                color: white;
+                font-size: 20px;
+            }
+            .ingredients{
+                width: 100%;
+                background-color: rgb(5, 3, 78);   
+                border: transparent;
+                color: white;
+                font-size: 20px;
+            }
+            .instruction{
+                width: 100%;
+                background-color: rgb(5, 3, 78);   
+                border: transparent;
+                color: white;
+                font-size: 20px;
+            }
+            .category{
+                background-color: rgb(5, 3, 78);   
+                // border: transparent; 
+                color: gray;
+                font-size: 20px;
+                padding: 10px 0px;
+                margin-bottom: 10px;
+                border-radius: 10px;
+            }
+            .save-recipe{
+                // display: block;
+                padding: 10px 10px;
+                font-size: 18px;
+                background-color: rgb(2, 0, 53); 
+                color: white;
+                border: none;
+                border-radius: 10px;
+                margin-left: 20px;
+
+            }
+            .save-recipe:active{
+                scale: 0.9;
+            }
+    }
+    // h3{
+    //     color: salmon;
+    //     font-size: 18px;
+    //     font-weight: 400; 
+    //     margin-bottom: 10px;  
+    //     text-align: center;
+    // }
+    // h5{
+    //     color: gray;
+    //     font-size: 14px;
+    //     font-weight: 400; 
+    //     text-align: center;
+            
+    //     .instruction-more{
+    //         color: rgb(67, 67, 255);
+    //         font-size: 14px;
+    //     }
+    // }
+    }
+
 }

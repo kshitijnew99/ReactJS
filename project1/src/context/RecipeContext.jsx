@@ -37,15 +37,15 @@ const RecipeContext = (props) => {
         },
         {
             "Name": "Chicken Biryani",
-            "category" : "Dinner",
+            "category" : "dinner",
             "description" : "Chicken biryani is a royal served to the mugal kings",
             "id" : "WDjwoG4yhnbqNYsv8YhQD",
             "ingredients": "Biryani Rice, Chicken, Onion, Tomato",
-            'instruction' : "1) Boil the rice.2) Heat oil in a pan and sauté the onion and tomato.",
+            'instruction' : "1) Boil the rice.2) Cook the chicken separately. 3) Mix the rice and chicken and ook them together for 15 minutes..",
             "url": "https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg"
         }
     ]) 
-    console.log(data);
+    // console.log(data);
     
 
     return (

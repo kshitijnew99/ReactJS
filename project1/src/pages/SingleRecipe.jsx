@@ -1,24 +1,86 @@
 import  { useContext } from 'react'
 import { recipecontext } from './../context/RecipeContext';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useForm } from "react-hook-form";
 
 const SingleRecipe = () => {
+    const navigate = useNavigate();
+    const  {data,setdata} = useContext(recipecontext)
+    const { register, handleSubmit , reset } = useForm();
 
-    const { data } = useContext(recipecontext);
+    const SubmitHandler =  (recipe) =>{}
+
+    // const { data } = useContext(recipecontext);
     const param = useParams();
-    console.log(data,param.id);
+    // console.log(data,param.id);
     var recipe = data.find((recipe) => param.id == recipe.id)
-    console.log(recipe);
+    // console.log(recipe);
     
     
   return (
     <div className='singlerecipe'>
-        <img  className='single-img' src={recipe.url} alt="" />
-        <h1>{recipe.Name}</h1>
-        <h3>{recipe.category}</h3>
-        <h3>{recipe.description}</h3>
-        <h5>{recipe.ingredients}</h5>
-        <h5>{recipe.instruction}</h5>
+        <div className="single-recipe-data">
+            <h1>{recipe.Name}</h1>
+            <img  className='single-img' src={recipe.url} alt="" />
+        </div>
+
+        <div className="modify-form">
+            <form className="form" onSubmit={handleSubmit(SubmitHandler)} >
+                <input 
+                className="url"
+                value={recipe.url}
+                {...register("url")}
+                type="url" 
+                placeholder='Enter Image URL' /> <br /> <  hr />
+                <small className="error" >This is how error is shown</small> <br />
+
+                <input 
+                className="recipe-title"
+                {...register("Name")}
+                value={recipe.Name}
+                type="text" 
+                placeholder='Recipe Title' /> <br /> <  hr /> <br />
+
+                <textarea 
+                className="description"
+                value={recipe.description}
+                {...register("description")}
+                placeholder="// Add the description"  ></textarea>
+                <hr /><br />
+
+                <textarea 
+                className="ingredients"
+                {...register("ingredients")}
+                value={recipe.ingredients}
+                placeholder="// Write ingredients"  ></textarea>
+                <hr /><br />
+
+                <textarea 
+                className="instruction"
+                {...register("instruction")}
+                value={recipe.instruction}
+                placeholder="// Give instructions"  ></textarea>
+                <hr /><br />
+
+                <select 
+                {...register("categort")}
+                
+                className="category">
+                    value={recipe.category}
+                    <option value="breakfast">BreakFast</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="snacks">Snacks</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+                {/* <br /> */}
+                <button className="save-recipe" >Save Recipe</button>
+
+
+            </form>
+        </div>
+        
+        
     </div>
   )
 }
