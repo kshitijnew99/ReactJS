@@ -9,13 +9,17 @@ const SingleRecipe = () => {
     const  {data,setdata} = useContext(recipecontext)
     const { register, handleSubmit , reset } = useForm();
 
-    const SubmitHandler =  (recipe) =>{}
+    const SubmitHandler =  (recipe) =>{ 
+        var index = data.findIndex((recipe) => param.id == recipe.id)
+        console.log(index);
+        
+
+    }
 
     // const { data } = useContext(recipecontext);
     const param = useParams();
-    // console.log(data,param.id);
     var recipe = data.find((recipe) => param.id == recipe.id)
-    // console.log(recipe);
+
     
     
   return (
@@ -73,8 +77,9 @@ const SingleRecipe = () => {
                     <option value="snacks">Snacks</option>
                     <option value="dinner">Dinner</option>
                 </select>
-                {/* <br /> */}
-                <button className="save-recipe" >Save Recipe</button>
+                <br />
+                <button className="update-recipe" >Update Recipe</button>
+                <button className="delete-recipe" >Delete Recipe</button>
 
 
             </form>

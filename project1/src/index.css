@@ -196,10 +196,10 @@ html, body {
 }
 
 .singlerecipe {
-  margin-top: 40px;
+  margin-top: 10px;
   margin-left: 15%;
   display: flex;
-  gap: 10%;
+  gap: 30%;
   padding: 10px;
   width: 80%;
 }
@@ -209,6 +209,7 @@ html, body {
 }
 .singlerecipe .single-recipe-data h1 {
   color: white;
+  width: 150px;
   font-size: 50px;
   font-weight: 100;
   margin-bottom: 10px;
@@ -274,18 +275,29 @@ html, body {
   color: gray;
   font-size: 20px;
   padding: 10px 0px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border-radius: 10px;
 }
-.singlerecipe .modify-form .form .save-recipe {
+.singlerecipe .modify-form .form .update-recipe {
   padding: 10px 10px;
   font-size: 18px;
-  background-color: rgb(2, 0, 53);
+  background-color: blue;
   color: white;
   border: none;
   border-radius: 10px;
-  margin-left: 20px;
 }
-.singlerecipe .modify-form .form .save-recipe:active {
+.singlerecipe .modify-form .form .update-recipe:active {
+  scale: 0.9;
+}
+.singlerecipe .modify-form .form .delete-recipe {
+  padding: 10px 10px;
+  font-size: 18px;
+  background-color: tomato;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+.singlerecipe .modify-form .form .delete-recipe:active {
   scale: 0.9;
 }/*# sourceMappingURL=index.css.map */
