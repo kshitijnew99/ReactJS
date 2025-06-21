@@ -175,12 +175,17 @@ html,body{
         width: 400px;
         height: fit-content;
         aspect-ratio: 1;
-        // display: flex;
+        display: flex;
+        flex-direction: column;
+        
+        transition-duration: all 5s linear;
+        
         .image{
             height: 20vh;
             aspect-ratio: 1;
             margin-bottom: 10px;
             border-radius: 10px;
+            object-fit: cover;
         }
         h1{
             color: white;
@@ -197,12 +202,26 @@ html,body{
         h4{
             color: gray;
             font-size: 14px;
-            font-weight: 400;   
+            font-weight: 400; 
+            
+            .instruction-more{
+                color: rgb(67, 67, 255);
+                font-size: 14px;
+            }
         }
         hr{
             border: 1px solid gray;
             margin: 15px 0px;
         }
     }
+    .showcard:hover{
+        scale: 1.025;
+    }
 
+
+}
+
+.singlerecipe{
+    margin-top: 40px;
+    margin-left: 15%
 }

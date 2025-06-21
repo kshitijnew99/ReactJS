@@ -13,7 +13,6 @@ const Recipes = () => {
   return (
     <div className='recipes'>
       {renderrecipe }
-      
     </div>
   )
 }

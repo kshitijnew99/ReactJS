@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 
+
 const RecipeCard = (props) => {
 
     const {id,Name,category,url,instruction,ingredients,description} = props.recipe;
   return (
-    <Link className='card' >
+    <Link to={`/recipes/details/${id}`} className='card' >
         
             <div className="showcard">
                 <img className='image' src={url} alt="" />
@@ -12,7 +13,8 @@ const RecipeCard = (props) => {
                 <h3>{category}</h3>
                 <h3>{ingredients}</h3>
                 <h4>{description}</h4>
-                <h4>{instruction}</h4>
+                <br />
+                <h4>{instruction}...<small className='instruction-more'>more</small> </h4>
                 
                 <br />
                 <hr />

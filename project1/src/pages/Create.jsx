@@ -2,9 +2,12 @@ import { useForm } from "react-hook-form";
 import {nanoid} from 'nanoid'
 import { useContext } from "react";
 import { recipecontext } from "../context/RecipeContext";
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 
 const Create = () => {
+    const navigate = useNavigate();
 
     const  {data,setdata} = useContext(recipecontext)
 
@@ -12,9 +15,10 @@ const Create = () => {
 
     const SubmitHandler =  (recipe) =>{
         recipe.id = nanoid();
-        
-
         setdata([...data,recipe]);
+        toast.success("New Recipe Added🥘")
+        navigate('/recipes');
+
         reset();
         
     }
@@ -71,3 +75,22 @@ const Create = () => {
 }
 
 export default Create
+
+
+/*
+0
+: 
+{id: 1, Name: 'Classic Margherita Pizza', category: 'Snacks', ingredients: Array(6), instruction: 'Preheat the oven to 475°F (245°C).', …}
+1
+: 
+{Name: 'Samosa', category: 'Snacks', ingredients: 'wheat floor , patota', description: '1 Plate of somasa is the of around 500 calories.', id: 'WDjwoG4yhnbqLYsv8YhQD', …}
+2
+: 
+{Name: 'Chicken Biryani', category: 'Dinner', description: 'Chicken biryani is a royal served to the mugal kings', id: 'WDjwoG4yhnbqLYsv8YhQD', ingredients: 'Biryani Rice, Chicken, Onion, Tomato', …}
+3
+: 
+{url: 'https://cdn.uengage.io/uploads/28289/image-14DG1B-1723180624.jpg', Name: 'Chole Bhature', description: 'Chole N=Bhature is the common snack in the street of the india.', ingredients: 'whaet floor , chick pees, cooking oil.', instruction: '1) firstly neat the floor.\n2) make the bhature.\n3)make the chick pee curry.', …}
+length
+: 
+4
+*/

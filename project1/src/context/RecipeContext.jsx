@@ -11,6 +11,7 @@ const RecipeContext = (props) => {
         {
             "id": 1,
             "Name": "Classic Margherita Pizza",
+            "category" : "Snacks",
             "ingredients": [
                 "Pizza dough",
                 ",Tomato sauce",
@@ -22,9 +23,26 @@ const RecipeContext = (props) => {
             "instruction": "Preheat the oven to 475°F (245°C)."
                 ,
             "url": "https://cdn.dummyjson.com/recipe-images/1.webp",
-            "description" : "Bake in the preheated oven for 12-15 minutes or until the crust is golden brown.",
-            "category" : "Snacks"
+            "description" : "Bake in the preheated oven for 12-15 minutes ."
             
+        },
+        {
+            "Name": "Samosa",
+            "category" : "Snacks",
+            "ingredients": "wheat floor , patota",
+            "description" : "1 Plate of somasa is the of around 500 calories.",
+            "id" : "WDjwoG4yhnbqLYsv8YhQD",
+            'instruction' : "Deep fried them",
+            "url": "https://static.toiimg.com/photo/61050397.cms"
+        },
+        {
+            "Name": "Chicken Biryani",
+            "category" : "Dinner",
+            "description" : "Chicken biryani is a royal served to the mugal kings",
+            "id" : "WDjwoG4yhnbqLYsv8YhQD",
+            "ingredients": "Biryani Rice, Chicken, Onion, Tomato",
+            'instruction' : "1) Boil the rice.2) Heat oil in a pan and sauté the onion and tomato.",
+            "url": "https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg"
         }
     ]) 
     console.log(data);

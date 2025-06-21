@@ -154,12 +154,17 @@ html, body {
   height: -moz-fit-content;
   height: fit-content;
   aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  transition-duration: all 5s linear;
 }
 .card .showcard .image {
   height: 20vh;
   aspect-ratio: 1;
   margin-bottom: 10px;
   border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card .showcard h1 {
   color: white;
@@ -178,7 +183,19 @@ html, body {
   font-size: 14px;
   font-weight: 400;
 }
+.card .showcard h4 .instruction-more {
+  color: rgb(67, 67, 255);
+  font-size: 14px;
+}
 .card .showcard hr {
   border: 1px solid gray;
   margin: 15px 0px;
+}
+.card .showcard:hover {
+  scale: 1.025;
+}
+
+.singlerecipe {
+  margin-top: 40px;
+  margin-left: 15%;
 }/*# sourceMappingURL=index.css.map */
