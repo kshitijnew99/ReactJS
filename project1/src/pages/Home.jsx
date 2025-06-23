@@ -1,18 +1,31 @@
 
 import axios from '../utils/axios';
+import { useEffect } from 'react';
+ 
 
 const Home = () => {
 
   const getproduct = async () => {
           try {
-            const response = await axios.get("/products ")
-            console.log(response.data);
-            
+            const {data} = await axios.get("/products ")
+            console.log(data); 
           } catch (error) {
               console.log(error);
-              
           }
   }
+
+  useEffect(() => {
+    
+      console.log("Home page Mounted");
+      getproduct();
+      
+
+    return () => {
+        console.log("Home page Un-Mounted");
+              
+    }
+  }, [])
+  
   return (
     <div className='home'>
       <h1>Home</h1>

@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { toast } from 'react-toastify';
+import { useEffect } from 'react';
 
 const SingleRecipe = () => {
     const  {data,setdata} = useContext(recipecontext)
@@ -42,6 +43,17 @@ const SingleRecipe = () => {
         navigate("/recipes");
     }
     
+    useEffect(() => {
+      
+        console.log("Single page Mounted");
+        // getproduct();
+        
+  
+      return () => {
+          console.log("Single page Un-Mounted");
+                
+      }
+    }, [])
     return (
         <div className='singlerecipe'>
             <div className="single-recipe-data">

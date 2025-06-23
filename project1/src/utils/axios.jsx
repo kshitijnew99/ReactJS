@@ -11,7 +11,8 @@ const instance = axios.create({
 instance.interceptors.request.use(function (config) {
     console.log("request ---->",config);
     return config;
-  }, function (error) {
+  },
+   function (error) {
     
     return Promise.reject(error);
   });
@@ -20,7 +21,8 @@ instance.interceptors.request.use(function (config) {
 instance.interceptors.response.use(function (response) {
     console.log("response ---->",response);
     return response;
-  }, function (error) {
+  },
+   function (error) {
 
     return Promise.reject(error);
   });

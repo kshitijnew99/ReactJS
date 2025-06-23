@@ -8,7 +8,9 @@ const App = () => {
   return (
     <>
       <Nav />
+      
       <Mainroutes />
+
       <ToastContainer 
         position="top-right"
         autoClose={2000}
