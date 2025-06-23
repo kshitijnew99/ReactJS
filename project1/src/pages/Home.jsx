@@ -1,12 +1,12 @@
 
-import axios from './../../node_modules/axios/lib/axios';
+import axios from '../utils/axios';
 
 const Home = () => {
 
   const getproduct = async () => {
           try {
-            const {data} = await axios.get("https://fakestoreapi.com/products ")
-            console.log({data});
+            const response = await axios.get("/products ")
+            console.log(response.data);
             
           } catch (error) {
               console.log(error);
