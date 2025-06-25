@@ -18,7 +18,7 @@ const Home = () => {
   useEffect(() => {
     
       console.log("Home page Mounted");
-      toast.success("Home Page...");
+      // toast.success("Home Page...");
       getproduct();
       
 
