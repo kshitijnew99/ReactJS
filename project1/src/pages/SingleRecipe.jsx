@@ -63,12 +63,12 @@ const SingleRecipe = () => {
 
             <div className="modify-form">
                 <form className="form" onSubmit={handleSubmit(SubmitHandler)} >
-                    {/* <input 
+                    <input 
                     className="url"
                     {...register("url")}
                     type="url" 
                     placeholder='Enter Image URL' /> <br /> <  hr />
-                    <small className="error" >This is how error is shown</small> <br /> */}
+                    <small className="error" >This is how error is shown</small> <br />
 
                     <input 
                     className="recipe-title"
