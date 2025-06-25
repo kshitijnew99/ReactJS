@@ -1,6 +1,7 @@
 
 import axios from '../utils/axios';
 import { useEffect } from 'react';
+import { toast } from 'react-toastify';
  
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
   useEffect(() => {
     
       console.log("Home page Mounted");
+      toast.success("Home Page...");
       getproduct();
       
 
