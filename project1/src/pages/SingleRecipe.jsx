@@ -25,7 +25,7 @@ const SingleRecipe = () => {
 
     }});
 
-    const SubmitHandler =  (recipe) =>{ 
+    const UpdateHandler =  (recipe) =>{ 
         var index = data.findIndex((recipe) => param.id == recipe.id)
         const copydata = [...data];
         copydata[index] = {...copydata[index], ...recipe };
@@ -62,7 +62,7 @@ const SingleRecipe = () => {
             </div>
 
             <div className="modify-form">
-                <form className="form" onSubmit={handleSubmit(SubmitHandler)} >
+                <form className="form" onSubmit={handleSubmit(UpdateHandler)} >
                     <input 
                     className="url"
                     {...register("url")}

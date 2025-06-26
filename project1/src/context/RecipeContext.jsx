@@ -1,6 +1,7 @@
 
 import { createContext } from 'react'
 import { useState } from 'react'
+import { useEffect } from 'react'
 
 export const recipecontext = createContext(null)
 
@@ -8,12 +9,33 @@ const RecipeContext = (props) => {
 
 
     const [data,setdata] = useState([
-        {
+        
+    ]) 
+    
+    useEffect(() => {
+      setdata(JSON.parse(localStorage.getItem('Recipes')));
+    
+      
+    }, [])
+    
+    
+
+    return (
+        <recipecontext.Provider value={{data,setdata}}>
+            {props.children}
+        </recipecontext.Provider>
+    )
+}
+
+export default RecipeContext;
+
+/*
+{
             "id": "1",
             "Name": "Classic Margherita Pizza",
             "category" : "Snacks",
             "ingredients": [
-                "Pizza dough",
+                "Pizza dough,
                 ",Tomato sauce",
                 ",Fresh mozzarella cheese",
                 ",Fresh basil leaves",
@@ -44,15 +66,6 @@ const RecipeContext = (props) => {
             'instruction' : "1) Boil the rice.2) Cook the chicken separately. 3) Mix the rice and chicken and ook them together for 15 minutes..",
             "url": "https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg"
         }
-    ]) 
-    // console.log(data);
-    
 
-    return (
-        <recipecontext.Provider value={{data,setdata}}>
-            {props.children}
-        </recipecontext.Provider>
-    )
-}
 
-export default RecipeContext;
+*/
