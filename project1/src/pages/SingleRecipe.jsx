@@ -70,11 +70,11 @@ const SingleRecipe = () => {
                     placeholder='Enter Image URL' /> <br /> <  hr />
                     <small className="error" >This is how error is shown</small> <br />
 
-                    {/* <input 
+                    <input 
                     className="recipe-title"
                     {...register("Name")}
                     type="text" 
-                    placeholder='Recipe Title' /> <br /> <  hr /> <br /> */}
+                    placeholder='Recipe Title' /> <br /> <  hr /> <br />
 
                     <textarea 
                     className="description"
