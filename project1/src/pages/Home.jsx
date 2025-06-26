@@ -9,7 +9,7 @@ const Home = () => {
   const getproduct = async () => {
           try {
             const {data} = await axios.get("/products ")
-            console.log(data); 
+            // console.log(data); 
           } catch (error) {
               console.log(error);
           }
@@ -17,13 +17,13 @@ const Home = () => {
 
   useEffect(() => {
     
-      console.log("Home page Mounted");
+      // console.log("Home page Mounted");
       // toast.success("Home Page...");
       getproduct();
       
 
     return () => {
-        console.log("Home page Un-Mounted");
+        // console.log("Home page Un-Mounted");
               
     }
   }, [])
