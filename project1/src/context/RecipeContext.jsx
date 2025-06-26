@@ -13,9 +13,8 @@ const RecipeContext = (props) => {
     ]) 
     
     useEffect(() => {
-      setdata(JSON.parse(localStorage.getItem('Recipes')));
+      setdata(JSON.parse(localStorage.getItem('Recipes')) || []);
     
-      
     }, [])
     
     

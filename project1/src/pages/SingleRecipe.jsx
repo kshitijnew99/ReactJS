@@ -15,12 +15,12 @@ const SingleRecipe = () => {
     const { register, handleSubmit , reset } = useForm({
         defaultValues : {
         
-            Name : recipe.Name,
-            description : recipe.description,
-            ingredients : recipe.ingredients,
-            instruction : recipe.instruction,
-            category : recipe.category,
-            url : recipe.url
+            Name : recipe?.Name,
+            description : recipe?.description,
+            ingredients : recipe?.ingredients,
+            instruction : recipe?.instruction,
+            category : recipe?.category,
+            url : recipe?.url
         
 
     }});
@@ -31,6 +31,7 @@ const SingleRecipe = () => {
         copydata[index] = {...copydata[index], ...recipe };
         console.log(copydata[index]);
         setdata(copydata);
+        localStorage.setItem('Recipes', JSON.stringify(copydata))
         toast.success("Recipe Updated😋")
     }
 
@@ -39,6 +40,7 @@ const SingleRecipe = () => {
     const DeleteHandler = () => {
         var filterdata = data.filter((recipe) => recipe.id !== param.id);
         setdata(filterdata);
+        localStorage.setItem('Recipes', JSON.stringify(filterdata))
         toast.success("Recipe Removed.")
         navigate("/recipes");
     }
