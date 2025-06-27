@@ -64,6 +64,8 @@ const SingleRecipe = () => {
   return (
     <div className="singlerecipe">
       <div className="single-recipe-data">
+        <i className="hearts ri-poker-hearts-line"></i>
+        <i className="hearts ri-poker-hearts-fill"></i>
         <h1>{recipe.Name}</h1>
         <img className="single-img" src={recipe.url} alt={recipe.Name} />
       </div>

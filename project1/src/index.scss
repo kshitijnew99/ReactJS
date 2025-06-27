@@ -225,16 +225,34 @@ html,body{
     margin-top: 10px;
     margin-left: 15%;
     display: flex;
-    gap: 30%;
+    gap: 100px;
     
     // background-color: yellow;
     padding: 10px;
     width: 80%;
 
     .single-recipe-data{
-        // background-color: yellow;    
+        // background-color: yellow;   
+        width: 400px; 
+        border: solid 4px salmon;
+        padding: 20px ;
+        border-radius: 50px;
+        position: relative;
+
+        .hearts{
+            color: tomato;
+            position: absolute;
+            right: 10%;
+            font-size: 40px;
+        }
+        // .Unhearts{
+        //     color: tomato;
+        //     position: absolute;
+        //     left: 45%;
+        // }
         .single-img{
-            width: 200px;
+            
+            width: 350px;
             border-radius: 40px;
             // margin-left: 36%;
             
