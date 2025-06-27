@@ -5,22 +5,23 @@ import { toast } from 'react-toastify';
  
 
 const Home = () => {
+  
 
   const getproduct = async () => {
           try {
-            const {data} = await axios.get("/products ")
-            // console.log(data); 
+            var {data} = await axios.get("/products ");
+          
+
           } catch (error) {
-              console.log(error);
+              // console.log(error);
           }
   }
 
+
+  
   useEffect(() => {
     
-      // console.log("Home page Mounted");
-      // toast.success("Home Page...");
       getproduct();
-      
 
     return () => {
         // console.log("Home page Un-Mounted");
@@ -30,8 +31,9 @@ const Home = () => {
   
   return (
     <div className='home'>
-      <h1>Home</h1>
-      <button onClick={getproduct} >Get Product</button>
+      {/* <h1>Home</h1> */}
+      {/* <button onClick={getproduct} >Get Product</button> */}
+      {getproduct}
 
     </div>
   )
