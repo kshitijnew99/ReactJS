@@ -26,7 +26,7 @@ const Home = () => {
       getproduct();
 
     return () => {
-        // console.log("Home page Un-Mounted");
+        
               
     }
   }, [])
