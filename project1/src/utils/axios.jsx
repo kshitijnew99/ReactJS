@@ -2,7 +2,7 @@ import axios from "axios"
 
 
 const instance = axios.create({
-    baseURL: "https://fakestoreapi.com/",
+    baseURL: "https://www.themealdb.com/api/json/v1/1/",
     // withCredentials: false,
 })
 

@@ -57,20 +57,30 @@ html,body{
     flex-wrap: wrap;
 
     .product-card{
-        // background-color: yellow;
-        // aspect-ratio: 1;
+        background: linear-gradient(145deg, #0a0a40, #0d0d60);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+        &:hover {
+            transform: scale(1.02);
+            border-color: rgba(255, 255, 255, 0.2);
+
+
+
+
+        }
         
         margin: 15px;
         padding: 15px;
-        width: 250px;
-        border: solid 3px black;
+        width: 300px;
         border-radius: 20px;
         .pro-img{
             
-            width:210px;
-            aspect-ratio: 1;
+            width:100%;
+            height: auto;
             object-fit: cover;
             border-radius: 20px;   
+            // display: block;
         }
         .pro-name{
             font-size: 20px;

@@ -50,15 +50,21 @@ html, body {
   flex-wrap: wrap;
 }
 .home .product-card {
+  background: linear-gradient(145deg, #0a0a40, #0d0d60);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   margin: 15px;
   padding: 15px;
-  width: 250px;
-  border: solid 3px black;
+  width: 300px;
   border-radius: 20px;
 }
+.home .product-card:hover {
+  transform: scale(1.02);
+  border-color: rgba(255, 255, 255, 0.2);
+}
 .home .product-card .pro-img {
-  width: 210px;
-  aspect-ratio: 1;
+  width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;

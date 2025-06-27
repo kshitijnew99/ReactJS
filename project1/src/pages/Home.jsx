@@ -11,8 +11,8 @@ const Home = () => {
 
   const getproduct = async () => {
           try {
-            var {data} = await axios.get("/products ");
-            setProducts(data)
+            var {data} = await axios.get("search.php?s=");
+            setProducts(data.meals)
 
           } catch (error) {
               // console.log(error);
@@ -35,11 +35,11 @@ const Home = () => {
     <div className='home'>
       {products.map(product => (
         <div key={product.id} className="product-card">
-          <img className='pro-img ' src={product.image} alt={product.name} />
-          <h3 className='pro-name' >{product.title}</h3>
-          <p className='pro-price'>₹{product.price}</p>
-          <h4 className='pro-cat'>{product.category}</h4>
-          <h4 className='pro-desc'>{product.description}</h4>
+          <img className='pro-img ' src={product.strMealThumb} alt={product.name} />
+          <h3 className='pro-name' >{product.strMeal}</h3>
+          {/* <p className='pro-price'>₹{product.price}</p> */}
+          <h4 className='pro-cat'>{product.strCategory}</h4>
+          <h4 className='pro-desc'>{product.strInstructions}</h4>
           
         </div>
       ))}
