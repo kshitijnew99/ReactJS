@@ -60,7 +60,7 @@ const Create = () => {
             <hr /><br />
 
             <select 
-            {...register("categort")}
+            {...register("category")}
             className="category">
                 <option value="breakfast">BreakFast</option>
                 <option value="lunch">Lunch</option>

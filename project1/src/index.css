@@ -300,4 +300,17 @@ html, body {
 }
 .singlerecipe .modify-form .form .delete-recipe:active {
   scale: 0.9;
+}
+
+.pagenotfound {
+  margin-top: 70px;
+  font-size: 170px;
+  color: salmon;
+  text-align: center;
+  font-weight: 540;
+}
+
+.fav {
+  margin-top: 40px;
+  margin-left: 15%;
 }/*# sourceMappingURL=index.css.map */
