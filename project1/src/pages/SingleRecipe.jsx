@@ -3,11 +3,16 @@ import { recipecontext } from './../context/RecipeContext';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
+import { useState  } from 'react';
 
 const SingleRecipe = () => {
   const { data, setdata } = useContext(recipecontext);
   const { id } = useParams();
   const navigate = useNavigate();
+
+  const [favroites, setfavroites] = useState(
+    JSON.parse(localStorage.getItem("fav")) || []
+  );
 
   const recipe = data.find((r) => r.id === id);
 
@@ -34,11 +39,10 @@ const SingleRecipe = () => {
       });
     }
 
-    console.log('Single page Mounted');
     return () => {
-      console.log('Single page Unmounted');
     };
   }, [recipe, reset]);
+
 
   const UpdateHandler = (updatedRecipe) => {
     const index = data.findIndex((r) => r.id === id);
@@ -61,11 +65,43 @@ const SingleRecipe = () => {
     return <p>Recipe not found.</p>;
   }
 
+  
+
+  
+
+  const favHandler = () => {
+    let copyfav = [...favroites]
+    copyfav.push(recipe)
+    setfavroites(copyfav)
+    localStorage.setItem("fav" , JSON.stringify(copyfav));
+  }
+
+  const UnfavHandler = () => {
+    const favfilter = favroites.filter((f) => f.id != recipe.id );
+    setfavroites(favfilter);
+    localStorage.setItem("fav" , JSON.stringify(favfilter));
+
+  }
+
+
+  
+
   return (
     <div className="singlerecipe">
       <div className="single-recipe-data">
-        <i className="hearts ri-poker-hearts-line"></i>
-        <i className="hearts ri-poker-hearts-fill"></i>
+        {favroites.find((r) => r.id === recipe.id) ? (
+          <i 
+              onClick={UnfavHandler} 
+              className="hearts ri-poker-hearts-fill"
+          ></i>
+      ) : (
+          <i  
+            onClick={favHandler} 
+            className="hearts ri-poker-hearts-line"
+          ></i> 
+      )}
+        {/* <i onClick={favHandler} className="hearts ri-poker-hearts-line"></i> */}
+        
         <h1>{recipe.Name}</h1>
         <img className="single-img" src={recipe.url} alt={recipe.Name} />
       </div>
