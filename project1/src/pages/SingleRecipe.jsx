@@ -1,9 +1,8 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { recipecontext } from './../context/RecipeContext';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
-import { useState  } from 'react';
 
 const SingleRecipe = () => {
   const { data, setdata } = useContext(recipecontext);
@@ -38,11 +37,7 @@ const SingleRecipe = () => {
         url: recipe.url || '',
       });
     }
-
-    return () => {
-    };
   }, [recipe, reset]);
-
 
   const UpdateHandler = (updatedRecipe) => {
     const index = data.findIndex((r) => r.id === id);
@@ -61,47 +56,39 @@ const SingleRecipe = () => {
     navigate('/recipes');
   };
 
+  const favHandler = () => {
+    let copyfav = [...favroites];
+    copyfav.push(recipe);
+    setfavroites(copyfav);
+    localStorage.setItem('fav', JSON.stringify(copyfav));
+  };
+
+  const UnfavHandler = () => {
+    const favfilter = favroites.filter((f) => f.id !== recipe.id);
+    setfavroites(favfilter);
+    localStorage.setItem('fav', JSON.stringify(favfilter));
+  };
+
+  // ✅ Safe conditional check after all hooks
   if (!recipe) {
     return <p>Recipe not found.</p>;
   }
-
-  
-
-  
-
-  const favHandler = () => {
-    let copyfav = [...favroites]
-    copyfav.push(recipe)
-    setfavroites(copyfav)
-    localStorage.setItem("fav" , JSON.stringify(copyfav));
-  }
-
-  const UnfavHandler = () => {
-    const favfilter = favroites.filter((f) => f.id != recipe.id );
-    setfavroites(favfilter);
-    localStorage.setItem("fav" , JSON.stringify(favfilter));
-
-  }
-
-
-  
 
   return (
     <div className="singlerecipe">
       <div className="single-recipe-data">
         {favroites.find((r) => r.id === recipe.id) ? (
-          <i 
-              onClick={UnfavHandler} 
-              className="hearts ri-poker-hearts-fill"
+          <i
+            onClick={UnfavHandler}
+            className="hearts ri-poker-hearts-fill"
           ></i>
-      ) : (
-          <i  
-            onClick={favHandler} 
+        ) : (
+          <i
+            onClick={favHandler}
             className="hearts ri-poker-hearts-line"
-          ></i> 
-      )}
-        {/* <i onClick={favHandler} className="hearts ri-poker-hearts-line"></i> */}
-        
+          ></i>
+        )}
+
         <h1>{recipe.Name}</h1>
         <img className="single-img" src={recipe.url} alt={recipe.Name} />
       </div>
@@ -160,7 +147,11 @@ const SingleRecipe = () => {
           <br />
 
           <button className="update-recipe">Update Recipe</button>
-          <button type="button" onClick={DeleteHandler} className="delete-recipe">
+          <button
+            type="button"
+            onClick={DeleteHandler}
+            className="delete-recipe"
+          >
             Delete Recipe
           </button>
         </form>
