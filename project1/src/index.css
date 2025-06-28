@@ -361,7 +361,7 @@ html, body {
 .pagenotfound {
   margin-top: 70px;
   font-size: 170px;
-  color: salmon;
+  color: red;
   text-align: center;
   font-weight: 540;
 }
