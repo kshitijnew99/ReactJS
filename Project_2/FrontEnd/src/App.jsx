@@ -5,7 +5,7 @@ const App = () => {
   const getproduct = async () => {
     try {
       const res = await axios.get('/products');
-      console.log(res); // logs the product list
+      // console.log(res); // logs the product list
     } catch (error) {
       console.log('Error fetching products:', error);
     }
