@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "nanoid": "^5.1.5",
-    "react-toastify": "^11.0.5",
-    "vite": "^6.3.5"
-  }
-}
