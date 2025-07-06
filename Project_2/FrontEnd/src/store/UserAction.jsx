@@ -1,13 +1,14 @@
-    import axios from '../api/axios'; 
+import axios from '../api/axios'; 
+import { louduser } from '../store/UserSlice';
 
-
-    export const asyncgetusers = async () =>{
-        try {
+export const asyncgetusers = async () =>{
+    try {
             const res = await axios.get('/users')
-            console.log(res.data);
+            // console.log(res.data);
+            louduser(res.data)
             
-        } catch (error) {
+    } catch (error) {
             console.log(error);
             
-        }
+    }
     }

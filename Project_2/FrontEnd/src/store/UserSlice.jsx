@@ -7,7 +7,9 @@ const initialState = {
 const userslice = createSlice({
     name : "user",
     initialState,
-    reducers : {},
+    reducers : {
+        louduser : (state,action) => {}
+    },
 })
-
+export const {louduser} = userslice.actions
 export default userslice.reducer
