@@ -1,11 +1,17 @@
 {
   "users": [
-    {
+      {
         "id": "fbfdbdgtnbtfbnzdf",
         "username": "john-cena",
         "email": "johncena@doe.com",
         "password": "123456"
-        }
+      },
+      {
+        "id": "fdfdbzfdbzdf",
+        "username": "undertaker",
+        "email": "undertaker@und.com",
+        "password": "654321"
+      }
   ],
   "products": [
     
