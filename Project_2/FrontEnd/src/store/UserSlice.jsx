@@ -16,7 +16,7 @@ const userslice = createSlice({
         } // sync data
         
         
-    },
+    } 
 })
 export const {louduser} = userslice.actions
 export default userslice.reducer

@@ -11,7 +11,6 @@ const App = () => {
   
   useEffect(() => {
     dispatch(asyncgetusers());
-
   }, []);
 
   return <div>server is running on port 3000</div>;
