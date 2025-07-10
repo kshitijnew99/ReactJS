@@ -14,7 +14,7 @@ const App = () => {
 
   }, []);
 
-  return <div>hello world</div>;
+  return <div>server is running on port 3000</div>;
 };
 
 export default App;
