@@ -2,6 +2,9 @@
 import { useEffect } from 'react';
 import { asyncgetusers } from './store/UserAction';
 import { useDispatch  , useSelector} from 'react-redux';
+import Mainroutes from '../src/routes/Mainroutes';
+import Nav  from './components/Nav';
+
 
 const App = () => {
   const data = useSelector((state) => state)
@@ -13,7 +16,10 @@ const App = () => {
     dispatch(asyncgetusers());
   }, []);
 
-  return <div>server is running on port 3000</div>;
+  return <div>
+    <Nav />
+    <Mainroutes />
+  </div>;
 };
 
 export default App;
