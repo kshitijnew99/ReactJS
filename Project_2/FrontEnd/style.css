@@ -93,4 +93,11 @@ html, body {
 .register .registerform .submit {
   margin-left: 100px;
   width: 50%;
+}
+.register .registerform p {
+  text-align: center;
+}
+.register .registerform p .login-redirect {
+  margin-left: 0px;
+  text-underline-offset: none;
 }/*# sourceMappingURL=style.css.map */
