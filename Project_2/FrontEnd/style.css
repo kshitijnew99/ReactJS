@@ -53,6 +53,13 @@ html, body {
   margin-left: 100px;
   width: 50%;
 }
+.login .loginform p {
+  text-align: center;
+}
+.login .loginform p .register-redirect {
+  margin-left: 0px;
+  text-underline-offset: none;
+}
 
 .register {
   background-color: yellow;
