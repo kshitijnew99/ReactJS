@@ -5,11 +5,11 @@ const initialState = {
     products : [],// it's like useState in context , array of object
 }
 
-const productsSlice = createSlice({
+const productSlice = createSlice({
     name : "products",
     initialState,
     reducers : {
-        loudproducts : (state,action) => {
+        loudproduct : (state,action) => {
             state.data = action.payload;
             console.log(action);
             
@@ -18,5 +18,5 @@ const productsSlice = createSlice({
         
     } 
 })
-export const {loudproducts} = productsSlice.actions
-export default productsSlice.reducer
+export const {loudproduct} = productSlice.actions
+export default productSlice.reducer

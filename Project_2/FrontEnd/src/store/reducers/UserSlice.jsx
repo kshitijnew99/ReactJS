@@ -5,7 +5,7 @@ const initialState = {
     data : [],// it's like useState in context , array of object
 }
 
-const userslice = createSlice({
+const userSlice = createSlice({
     name : "user",
     initialState,
     reducers : {
@@ -18,5 +18,5 @@ const userslice = createSlice({
         
     } 
 })
-export const {louduser} = userslice.actions
-export default userslice.reducer
+export const {louduser} = userSlice.actions
+export default userSlice.reducer

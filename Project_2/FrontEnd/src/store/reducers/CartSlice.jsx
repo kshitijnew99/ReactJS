@@ -4,11 +4,11 @@ const initialState = {
     carts : [],// it's like useState in context , array of object
 }
 
-const cartsSlice = createSlice({
+const cartSlice = createSlice({
     name : "carts",
     initialState,
     reducers : {
-        loudcarts : (state,action) => {
+        loudcart : (state,action) => {
             state.data = action.payload;
             console.log(action);
             
@@ -17,5 +17,5 @@ const cartsSlice = createSlice({
         
     } 
 })
-export const {loudcarts} = cartsSlice.actions
-export default cartsSlice.reducer
+export const {loudcart} = cartSlice.actions
+export default cartSlice.reducer
