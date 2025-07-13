@@ -1,11 +1,17 @@
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { nanoid } from '@reduxjs/toolkit';
 
 const Register = () => {
     const { register , reset , handleSubmit } = useForm();
+    const registerhandler = (data) =>{
+        data.id = nanoid()
+        console.log(data);
+        
+    }
     return (
         <div className='register'>
-            <form  className='registerform'>
+            <form  className='registerform' onSubmit={handleSubmit(registerhandler)}>
                 <input 
                     {...register("Username")}
                     type="text" 

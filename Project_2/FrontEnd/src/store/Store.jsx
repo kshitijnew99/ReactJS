@@ -1,7 +1,7 @@
 // Store is just a group of data
 
 import { configureStore } from '@reduxjs/toolkit'
-import userslice from './UserSlice';
+import userslice from './reducers/UserSlice';
 
 export const store = configureStore({
   reducer: {

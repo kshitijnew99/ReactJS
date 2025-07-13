@@ -1,12 +1,19 @@
 
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import { nanoid } from '@reduxjs/toolkit';
 
 const Login = () => {
   const { register , reset , handleSubmit } = useForm();
+
+  const loginhandler = (data) =>{
+    data.id = nanoid()
+    console.log(data);
+    
+  }
   return (
     <div className='login'>
-      <form  className='loginform'>
+      <form  className='loginform' onSubmit={handleSubmit(loginhandler)}>
         
         <input 
         {...register("email")}
