@@ -10,7 +10,7 @@ const App = () => {
   const data = useSelector((state) => state)
   const dispatch = useDispatch();
 
-  console.log(data);
+  // console.log(data);
   
   useEffect(() => {
     dispatch(asyncgetusers());
