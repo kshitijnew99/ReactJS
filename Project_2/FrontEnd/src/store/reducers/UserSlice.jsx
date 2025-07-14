@@ -11,7 +11,7 @@ const userSlice = createSlice({
     reducers : {
         louduser : (state,action) => {
             state.data = action.payload;
-            console.log(action);
+            // console.log(action);
             
         } // sync data
         

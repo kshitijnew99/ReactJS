@@ -10,7 +10,7 @@ const cartSlice = createSlice({
     reducers : {
         loudcart : (state,action) => {
             state.data = action.payload;
-            console.log(action);
+            // console.log(action);
             
         } // sync data
         

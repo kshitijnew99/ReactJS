@@ -11,7 +11,7 @@ const productSlice = createSlice({
     reducers : {
         loudproduct : (state,action) => {
             state.data = action.payload;
-            console.log(action);
+            // console.log(action);
             
         } // sync data
         
