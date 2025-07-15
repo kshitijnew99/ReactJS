@@ -1,5 +1,5 @@
-import axios from '../api/axios'; 
-import { louduser } from './reducers/UserSlice';
+import axios from '../../api/axios'; 
+import { louduser } from '../reducers/UserSlice';
 
 
 export const asyncgetusers = () => async (dispatch,getState) =>{ 

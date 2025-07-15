@@ -1,6 +1,6 @@
 
 import { useEffect } from 'react';
-import { asyncgetusers } from './store/UserAction';
+import { asyncgetusers } from './store/actions/UserAction';
 import { useDispatch  , useSelector} from 'react-redux';
 import Mainroutes from '../src/routes/Mainroutes';
 import Nav  from './components/Nav';
