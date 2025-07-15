@@ -10,14 +10,14 @@ export const asyncgetusers = () => async (dispatch,getState) =>{
     */ 
 
     try {
-            console.log("Current State : ",getState()); 
+        //     console.log("Current State : ",getState()); 
             
             const res = await axios.get('/users')
             
             dispatch(louduser(res.data)) // louduser is a action not a function in redux-toolkit and actions are always dispetch
             
     } catch (error) {
-            console.log(error);
+        //     console.log(error);      
             
     }
     }
