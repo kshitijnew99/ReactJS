@@ -1,32 +1,43 @@
 {
   "users": [
-      {
-        "id": "fbfdbdgtnbtfbnzdf",
-        "username": "john-cena",
-        "email": "johncena@doe.com",
-        "password": "123456"
-      },
-      {
-        "id": "fdfdbzfdbzdf",
-        "username": "undertaker",
-        "email": "undertaker@und.com",
-        "password": "654321"
-      }
-  ],
-  "products": [
-    
     {
-        "id": 1,
-        "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-        "price": 109.95,
-        "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-        "category": "men's clothing",
-        "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-        "rating": {
-        "rate": 3.9,
-        "count": 120
-        }
+      "id": "fbfdbdgtnbtfbnzdf",
+      "username": "john-cena",
+      "email": "johncena@doe.com",
+      "password": "123456"
+    },
+    {
+      "id": "fdfdbzfdbzdf",
+      "username": "undertaker",
+      "email": "undertaker@und.com",
+      "password": "654321"
+    },
+    {
+      "id": "IDyzf8mOanbuegu_bUlu3",
+      "Username": "kshitij",
+      "email": "kshitij@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "ys1AvbJRu4iVVTgIx9xiB",
+      "Username": "jay",
+      "email": "jay@gmail.com",
+      "password": "452361"
     }
   ],
-  "carts" : []
+  "products": [
+    {
+      "id": "1",
+      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      "price": 109.95,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    }
+  ],
+  "carts": []
 }
