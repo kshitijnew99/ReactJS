@@ -36,7 +36,7 @@ const Register = () => {
                     placeholder='********' />
 
 
-                <button className='submit'>Register</button>
+                <button className='submit'>Register.</button>
 
 
                 <p>Already have an account <Link className='login-redirect' to="/login">LogIn</Link> </p> 
