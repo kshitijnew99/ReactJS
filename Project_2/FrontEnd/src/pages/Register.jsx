@@ -28,7 +28,7 @@ const Register = () => {
                     placeholder='Username' />
                 <input 
                     {...register("email")}
-                    type="email" 
+                    type="email." 
                     placeholder='Email' />
                 <input 
                     {...register("password")}
