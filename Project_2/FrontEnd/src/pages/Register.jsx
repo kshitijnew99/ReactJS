@@ -32,7 +32,7 @@ const Register = () => {
                     placeholder='Email' />
                 <input 
                     {...register("password")}
-                    type="password" 
+                    type="password." 
                     placeholder='********' />
 
 
